@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424000611) do
+ActiveRecord::Schema.define(version: 20160424021228) do
 
   create_table "reports", force: :cascade do |t|
     t.float  "temp"
     t.float  "lat"
     t.float  "long"
     t.string "sensor_mac"
+    t.string "controller_mac"
   end
 
   create_table "sensors", force: :cascade do |t|
