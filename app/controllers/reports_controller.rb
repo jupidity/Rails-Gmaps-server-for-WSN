@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
   end
 
   def test
-    puts "Success!"
+    logger.debug "Success!"
     render nothing: true
   end
 
