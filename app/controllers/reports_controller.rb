@@ -1,4 +1,6 @@
 class ReportsController < ApplicationController
+  protect_from_forgery :except => :create
+  
   def create
     @report = Report.new report_params
     @report.save
