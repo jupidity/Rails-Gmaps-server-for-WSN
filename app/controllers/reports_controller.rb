@@ -5,6 +5,11 @@ class ReportsController < ApplicationController
     render nothing: true
   end
 
+  def test
+    puts "Success!"
+    render nothing: true
+  end
+
   private
 
     def report_params

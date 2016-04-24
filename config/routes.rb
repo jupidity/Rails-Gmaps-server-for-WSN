@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'reports/create'
+  post 'reports/create'
 
   get 'reports/test'
 
