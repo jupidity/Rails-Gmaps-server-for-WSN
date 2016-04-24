@@ -1,7 +1,8 @@
 class ReportsController < ApplicationController
   protect_from_forgery :except => :create
-  
+
   def create
+    logger.debug report_params
     @report = Report.new report_params
     @report.save
     render nothing: true
