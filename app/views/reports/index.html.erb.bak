@@ -1,0 +1,10 @@
+<table style="width:100%">
+  <tbody>
+    <% @reports.each do |report| %>
+    <tr>
+      <td><%= report.sensor_mac %></td>
+      <td><%= report.temp %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
