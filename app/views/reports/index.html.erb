@@ -4,12 +4,14 @@
       <td>Sensor Mac Address</td>
       <td>Controller Mac Address </td>
       <td>Temperature (C)</td>
+      <td>Time Logged</td>
     </tr>
     <% @reports.each do |report| %>
     <tr>
       <td><%= report.sensor_mac %></td>
       <td><%= report.controller_mac %></td>
       <td><%= report.temp %></td>
+      <td><%= report.updated_at %></td>
     </tr>
     <% end %>
   </tbody>
