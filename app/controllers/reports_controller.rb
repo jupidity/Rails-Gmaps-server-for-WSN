@@ -1,6 +1,10 @@
 class ReportsController < ApplicationController
   protect_from_forgery :except => :create
 
+  def index
+    @reports = Report.all
+  end
+
   def create
     logger.debug report_params
     @report = Report.new report_params
