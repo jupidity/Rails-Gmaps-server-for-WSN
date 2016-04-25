@@ -2,11 +2,13 @@
   <tbody>
     <tr>
       <td>Sensor Mac Address</td>
+      <td>Controller Mac Address </td>
       <td>Temperature (C)</td>
     </tr>
     <% @reports.each do |report| %>
     <tr>
       <td><%= report.sensor_mac %></td>
+      <td><%= report.controller_mac %></td>
       <td><%= report.temp %></td>
     </tr>
     <% end %>
