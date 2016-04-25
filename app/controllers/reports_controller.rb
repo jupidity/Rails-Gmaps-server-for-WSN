@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   protect_from_forgery :except => :create
 
   def index
-    @reports = Report.pluck(:sensor_mac).uniq.map {|mac| Report.where(sensor_mac: mac).last }
+    @reports = Report.pluck(:sensor_mac).uniq.sort.map {|mac| Report.where(sensor_mac: mac).last }
   end
 
   def create
