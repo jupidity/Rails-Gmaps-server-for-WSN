@@ -9,11 +9,15 @@ class ReportsController < ApplicationController
       marker.lng report.long
       desc = "Sensor Mac: #{report.sensor_mac}, Temperature: #{report.temp} C"
       marker.infowindow desc
+      marker.picture({
+        :url => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=S|FF0000|000000", # up to you to pass the proper parameters in the url, I guess with a method from device
+        :width   => 32,
+        :height  => 32
+      })
 
-     end
 
+  end
 
-  
 
 
 
@@ -26,6 +30,12 @@ class ReportsController < ApplicationController
         marker.lng controller.controller_long
         desc = "Controller Mac: #{controller.controller_mac} "
         marker.infowindow desc
+        marker.picture({
+          :url => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=C|0000FF|000000",
+          :width => 32,
+          :height  => 32
+        })
+
 
     end
 
