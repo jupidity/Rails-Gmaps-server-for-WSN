@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424024127) do
+ActiveRecord::Schema.define(version: 20160429014601) do
 
   create_table "reports", force: :cascade do |t|
     t.float    "temp"
@@ -21,10 +21,32 @@ ActiveRecord::Schema.define(version: 20160424024127) do
     t.string   "controller_mac"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "controller_long"
+    t.float    "controller_lat"
   end
 
   create_table "sensors", force: :cascade do |t|
     t.string "mac"
+  end
+
+  create_table "trials", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
+    t.string   "description"
+    t.string   "title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
+    t.string   "description"
+    t.string   "title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'reports#test'
+  root 'reports#maps'
 
   get '/reports/', to: "reports#index", as: "reports"
   get 'reports/create'
