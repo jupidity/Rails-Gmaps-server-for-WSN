@@ -3,7 +3,7 @@
 
 
 <script>
-    setTimeout(function(){ location.reload(); }, 5000);
+    setTimeout(function(){ location.reload(); }, 20000);
 </script>
 
 <script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script>
@@ -21,7 +21,7 @@
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
-  var mapOptions = { mapTypeId: google.maps.MapTypeId.HYBRID };
+  var mapOptions = { mapTypeId: google.maps.MapTypeId.SATELLITE };
   handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
     markers =  handler.addMarkers(<%=raw @hash.to_json %>);
 
