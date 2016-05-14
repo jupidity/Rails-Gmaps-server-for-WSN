@@ -52,10 +52,7 @@ class ReportsController < ApplicationController
     render nothing: true
   end
 
-  def test
-    logger.debug "Success!"
-    render nothing: true
-  end
+
 
   private
 
